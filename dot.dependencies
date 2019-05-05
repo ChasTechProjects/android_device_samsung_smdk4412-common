@@ -1,8 +1,0 @@
-[
-  {
-    "remote": "github",
-    "repository": "dotos/android_packages_resources_devicesettings",
-    "revision": "dot-p",
-    "target_path": "packages/resources/devicesettings"
-  }
-]
