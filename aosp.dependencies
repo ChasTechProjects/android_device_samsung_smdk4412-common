@@ -8,7 +8,7 @@
         "target_path": "kernel/samsung/smdk4412"
     },
     {
-        "repository": "android_packages_apps_SamsungServiceMode",
+        "repository": "platform_packages_apps_SamsungServiceMode",
         "target_path": "packages/apps/SamsungServiceMode"
     },
     {
