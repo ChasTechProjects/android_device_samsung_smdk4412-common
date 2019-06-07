@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/smdk4412-common
-
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
 USE_CAMERA_STUB := false
@@ -62,8 +60,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib/libsuspend.so|libsuspend-shim.so \
     /system/lib/libandroid_servers.so|libsuspend-shim.so
 
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+WITH_DEXPREOPT := false
+#WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 
 # Filesystem
 #BOARD_NAND_PAGE_SIZE := 4096
@@ -119,6 +117,7 @@ TARGET_USES_LOGD := false
 
 # RIL
 BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
+# RIL
 BOARD_PROVIDES_LIBRIL := true
 BOARD_MODEM_TYPE := xmm6262
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/smdk4412-common/include
@@ -138,9 +137,6 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/etc/wifi/bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/wifi/bcmdhd_p2p.bin"
 WIFI_BAND                        := 802_11_ABG
 BOARD_HAVE_SAMSUNG_WIFI          := true
-
-# Key disabler
-JAVA_SOURCE_OVERLAYS := com.samsung.keydisabler|$(DEVICE_PATH)/keydisabler|**/*.java
 
 # Network Routing
 TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE := true

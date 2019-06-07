@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service.exynos4
 
+# SamsungServiceMode
+PRODUCT_PACKAGES += \
+    SamsungServiceMode
+    
 # Usb
 PRODUCT_PACKAGES += \
 	android.hardware.usb@1.0-impl \
@@ -161,9 +165,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true \
     ro.vendor.qti.sys.fw.bservice_age=5000 \
     ro.vendor.qti.sys.fw.bservice_limit=10
-
-PRODUCT_PACKAGES += \
-    SamsungDoze
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -256,7 +257,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=1 \
     dalvik.vm.image-dex2oat-threads=1
 
-# Build with specific settings for smdk4412-common
+# Build with specific settings for Galaxys2-common
 $(call inherit-product, $(LOCAL_PATH)/go_smdk4412-common.mk)
 
 # Apply Dalvik config for 1G phone
