@@ -96,7 +96,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     AdvancedDisplay \
     android.hardware.light@2.0-service.samsung \
-    vendor.lineage.livedisplay@2.0-service.samsung-exynos \
     android.hardware.graphics.allocator@2.0-impl-exynos4 \
     android.hardware.graphics.mapper@2.0-impl-exynos4 \
     android.hardware.graphics.composer@2.1-impl \
@@ -252,10 +251,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
-
-# Stylus gestures
-PRODUCT_PACKAGES += \
-    org.lineageos.keyhandler
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
